@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover-sicily {
+   max-width: 200px;
+   margin: auto;
+}
+
+.discover-sicily img {
+    width: 100%;
+}
+
+.images-container {
+    max-width: 500px;
+}
+
+.images-container img {
+    width: 100%;
+}
+
+i {
+    font-size: 60px;
+}
+
+li {
+    list-style: none;
+}
