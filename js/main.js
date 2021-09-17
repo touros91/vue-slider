@@ -8,9 +8,9 @@ const app = new Vue(
             "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/catania-cosa-vedere-1619507580.jpg",
             "https://www.bravodriver.com/assets/img/italy/sicily/ragusa/ragusa_ibla.jpg",
             "https://a.cdn-hotels.com/gdcs/production178/d1521/a0d859a0-5863-11e8-a5ee-0242ac110030.jpg",
-            "http://www.offertevacanzeinitalia.com/wp-content/uploads/2020/06/spiagge-della-sicilia-san-vito-lo-capo-foto-alex-brenko.jpg",
+            "https://media-cdn.tripadvisor.com/media/vr-splice-j/00/7d/e1/99.jpg",
             "https://www.eleonoraongaro.it/wp-content/uploads/2021/05/Biglietti-valle-dei-templi-Agrigento-1030x687.jpg",
-            "https://www.sicilia.info/wp-content/uploads/sites/91/cefalu-hd.jpg"],
+            "https://www.labisialacarte.it/wp-content/uploads/2020/07/Cefal%C3%B9-primavera.jpg"],
             altTextImages: ["Palermo", "Catania", "Ragusa", "Taormina", "San Vito Lo Capo", "Valle dei Templi", "Cefalù"],
             imageCounter: 0
         },
@@ -34,10 +34,11 @@ const app = new Vue(
                     return "circle-active";
                 }
                 return "";
+            },
+
+            showCurrentImage: function(index){
+                this.imageCounter = index;
             }
-
-            
-
         },
 
         mounted: function() {
@@ -48,6 +49,6 @@ const app = new Vue(
                                 this.imageCounter = 0;
                            }
                         }, 3000)
-        } 
+                }     
     }
 );

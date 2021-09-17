@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="root">
-        
+
         <header>
             <div class="discover-sicily">
                 <img :src="discoverSicilyImage" :alt="altTextDiscoverSicily">
@@ -29,7 +29,8 @@
                             <div class="foto">
                                 <img :src="images[imageCounter]" :alt="altTextImages[imageCounter]">
                                 <div class="circle">
-                                    <i class="fas fa-circle circle-i" :class="activeCircle(index)" v-for="(image, index) in images" :key="index"></i>
+                                    <i @click="showCurrentImage(index)" class="fas fa-circle circle-i" :class="activeCircle(index)" v-for="(image, index) in images" :key="index">
+                                    </i>
                                 </div>
                             </div>
                         </li>
