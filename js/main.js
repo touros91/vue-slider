@@ -35,6 +35,14 @@ const app = new Vue(
                 }
                 return "";
             }
-        }
+
+            
+
+        },
+
+        mounted: setInterval(
+            function(){
+                this.imageCounter++;
+            }, 3000) 
     }
 );
