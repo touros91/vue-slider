@@ -21,11 +21,19 @@ const app = new Vue(
                     this.imageCounter = 0;
                }
             },
+
             previous: function(){
                 this.imageCounter--;
                 if (this.imageCounter < 0) {
                     this.imageCounter = this.images.length - 1;
                 }
+            },
+
+            activeCircle: function(circleIndex){
+                if (this.imageCounter == circleIndex) {
+                    return "circle-active";
+                }
+                return "";
             }
         }
     }

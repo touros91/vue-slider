@@ -27,10 +27,38 @@
     width: 100%;
 }
 
-i {
+.arrow-left i, .arrow-right i {
     font-size: 60px;
+    color: #FDB040;
+    margin: 0 30px 0 30px;
 }
 
 li {
     list-style: none;
+}
+
+.foto {
+    position: relative;
+}
+
+
+.circle {
+    margin: auto;
+    display: inline-block;
+    background-color: #FDB040;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.circle-i {
+    font-size: 10px;
+    color: white;
+    margin: 0 10px;
+}
+
+.circle-active {
+    color: #A01F63;
 }
