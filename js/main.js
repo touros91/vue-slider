@@ -40,9 +40,14 @@ const app = new Vue(
 
         },
 
-        mounted: setInterval(
-            function(){
-                this.imageCounter++;
-            }, 3000) 
+        mounted: function() {
+                    setInterval(
+                        () =>{
+                            this.imageCounter++;
+                            if (this.imageCounter >= this.images.length) {
+                                this.imageCounter = 0;
+                           }
+                        }, 3000)
+        } 
     }
 );
