@@ -27,7 +27,7 @@
                     <ul>
                         <li>
                             <div class="foto">
-                                <img :src="images[imageCounter]" :alt="altTextImages[imageCounter]">
+                                <img :src="images[imageCounter].src" :alt="images[imageCounter].altText">
                                 <div class="circle">
                                     <i @click="showCurrentImage(index)" class="fas fa-circle circle-i" :class="activeCircle(index)" v-for="(image, index) in images" :key="index">
                                     </i>
