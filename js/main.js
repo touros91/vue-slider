@@ -12,7 +12,8 @@ const app = new Vue(
             "https://www.eleonoraongaro.it/wp-content/uploads/2021/05/Biglietti-valle-dei-templi-Agrigento-1030x687.jpg",
             "https://www.labisialacarte.it/wp-content/uploads/2020/07/Cefal%C3%B9-primavera.jpg"],
             altTextImages: ["Palermo", "Catania", "Ragusa", "Taormina", "San Vito Lo Capo", "Valle dei Templi", "Cefalù"],
-            imageCounter: 0
+            imageCounter: 0,
+            autoPlay: null
         },
         methods: {
             next: function() {
@@ -38,17 +39,14 @@ const app = new Vue(
 
             showCurrentImage: function(index){
                 this.imageCounter = index;
+            },
+            stopAutoPlay: function(){
+                clearInterval(this.autoPlay);
             }
         },
 
         mounted: function() {
-                    setInterval(
-                        () =>{
-                            this.imageCounter++;
-                            if (this.imageCounter >= this.images.length) {
-                                this.imageCounter = 0;
-                           }
-                        }, 3000)
+                    this.autoPlay = setInterval(this.next, 3000);
                 }     
     }
 );
